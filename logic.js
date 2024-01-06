@@ -20,21 +20,21 @@ function getPlayerChoice() {
 }
 
 function playround(playerSelection, computerSelection) {
-    console.log("User\'s "+ playerSelection + " vs. Computer's " + computerSelection);
+    alert("User\'s "+ playerSelection + " vs. Computer's " + computerSelection);
 
-    if (playerSelection == computerSelection) { console.log("Tie!"); }
+    if (playerSelection == computerSelection) { alert("Tie!"); }
     else if ((playerSelection === 'ROCK!' && computerSelection === 'SCISSORS!') ||
     (playerSelection === 'PAPER!' && computerSelection === 'ROCK!') ||
     (playerSelection === 'SCISSORS!' && computerSelection === 'PAPER!')) 
     { 
-        console.log("User Win!");
+        alert("User Win!");
         return User++; 
     }
     else if ((computerSelection === 'ROCK!' && playerSelection === 'SCISSORS!') ||
     (computerSelection === 'PAPER!' && playerSelection === 'ROCK!') ||
     (computerSelection === 'SCISSORS!' && playerSelection === 'PAPER!')) 
     { 
-        console.log("Computer Win!");
+        alert("Computer Win!");
         return Computer++; }
     }
 
@@ -45,7 +45,7 @@ function game() {
         playround(getPlayerChoice(), getcomputerSelection());
     }
     value = (User > Computer)? "USER WINS!!" : "COMPUTER WINS!!";
-    console.log("\n\nScores:\nUser\t\t" + User + "\nComputer\t" + Computer + "\n" + value);
+    alert("\n\nScores:\nUser\t\t" + User + "\nComputer\t" + Computer + "\n" + value);
 
 }
 
